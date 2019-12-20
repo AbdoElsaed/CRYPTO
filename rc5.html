@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>RC5</title>
+  </head>
+  <body>
+
+
+    <!-- Start Side Navigation -->
+
+    <div class="sidenav">
+        <div id="logo">
+                <h3 id="logoText" title="CRYPTO"><a href="index.html">CRYPTO</a></h3>
+        </div>
+        <div id="links">
+            <h4 id="parentLink">Substitution</h4>
+            <a href="caesar.html" class="childLink">Caesar</a>
+            <a href="monoalphabetic.html" class="childLink">Monoalphabetic</a>
+            <a href="vigenere.html" class="childLink">Vigenere</a>
+            <a href="playfair.html" class="childLink">Playfair</a>
+            <h4 id="parentLink">Transposition</h4>
+            <a href="rowtransposition.html" class="childLink">Row Transposition</a>
+            <a href="railfence.html" class="childLink">Railfence</a>
+            <h4 id="parentLink">Block Cipher</h4>
+            <a href="rc5.html" class="childLink">RC5</a>
+            <a href="rc5.html" class="childLink">RC6</a>
+            <a href="rc5.html" class="childLink">MRC6</a>
+        </div>
+    </div>
+
+    <!-- End Side Navigation -->
+
+    
+
+    <!-- Start Main -->
+      
+    <div class="container">
+        <div id="rc5">
+            <div class="sec">
+                <label for="p">Plaintext</label>
+                <br />
+                <textarea class="form-control" id="plainText" name="p" rows="4" cols="50"></textarea>
+            </div>
+            <div class="sec">
+                <label for="key">Key: </label> 
+                <input class="form-control" id="key" name="key" size="10" type="text" /> &nbsp;&nbsp;&nbsp;
+                <label for="wordSize">W:  <span>word size (16, 32, 64)</span> </label> 
+                <input id="wordSize" class="form-control" name="pc" size="1" value="32" type="number" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="rounds">R: <span>rounds (0, 255)</span> </label> 
+                <input id="rounds" class="form-control" name="pc" size="1" value="12" type="number" min="0" max="255"/>
+            </div>
+            <div class="sec">
+                <input class="btn btn-primary" type="button" name="btnEn" value="Encrypt" onclick="handleEncryption()" /><i class="fa fa-arrow-down"></i>
+                <input class="btn btn-primary" type="button" name="btnDe" value="Decrypt" onclick="handleDecryption()" /><i class="fa fa-arrow-up"></i>
+            </div>
+            <div class="sec">
+                <label for="c">Ciphertext</label>
+                <br />
+                <textarea class="form-control" id="cipherText" name="c" rows="4" cols="50"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- End Main -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="./scripts/bundle.js"></script>
+    <script type="">
+
+    
+    function handleEncryption(string, keyword){
+    
+    var plainText = document.getElementById('plainText');
+    var cipherText = document.getElementById('cipherText');
+    var key = document.getElementById('key');
+    var wordSize = document.getElementById('wordSize').value;
+    var rounds = document.getElementById('rounds').value;
+
+    string = plainText.value;
+    keyword = key.value; 
+    var rc5 = new RC5(keyword, wordSize, rounds);
+
+    var enBuf = rc5.encrypt(string);
+    cipherText.value = enBuf;
+}
+
+function handleDecryption(){
+
+    var plainText = document.getElementById('plainText').value;
+    var cipherText = document.getElementById('cipherText').value;
+    var key = document.getElementById('key').value;
+    var wordSize = document.getElementById('wordSize').value;
+    var rounds = document.getElementById('rounds').value;
+
+    var rc5 = new RC5(key, wordSize, rounds);
+
+    let deBuf = rc5.decrypt(cipherText);
+    // console.log(deBuf);
+    // console.log(deBuf.toString());
+    plainText = deBuf.toString();
+}
+
+    </script>
+    <!-- <script src="./scripts/rc5.js"></script> -->
+   </body>
+</html>

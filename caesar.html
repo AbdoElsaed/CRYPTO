@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Caesar</title>
+  </head>
+  <body>
+
+
+    <!-- Start Side Navigation -->
+
+    <div class="sidenav">
+        <div id="logo">
+                <h3 id="logoText" title="CRYPTO"><a href="index.html">CRYPTO</a></h3>
+        </div>
+        <div id="links">
+            <h4 id="parentLink">Substitution</h4>
+            <a href="caesar.html" class="childLink">Caesar</a>
+            <a href="monoalphabetic.html" class="childLink">Monoalphabetic</a>
+            <a href="vigenere.html" class="childLink">Vigenere</a>
+            <a href="playfair.html" class="childLink">Playfair</a>
+            <h4 id="parentLink">Transposition</h4>
+            <a href="rowtransposition.html" class="childLink">Row Transposition</a>
+            <a href="railfence.html" class="childLink">Railfence</a>
+            <h4 id="parentLink">Block Cipher</h4>
+            <a href="rc5.html" class="childLink">RC5</a>
+            <a href="rc5.html" class="childLink">RC6</a>
+            <a href="rc5.html" class="childLink">MRC6</a>
+        </div>
+    </div>
+
+    <!-- End Side Navigation -->
+
+
+    <!-- Start Main -->
+      
+    <div class="container">
+        <form action="" class="form-horizontal">
+            <div class="form-group">
+                <label for="plainText">Plain Text</label>
+                <textarea class="form-control" name="PlainText" id="plainText" cols="120" rows="8" ></textarea> <br />
+                <span>Shift</span> 
+                <input type="text" class="form-control" id="shift">
+            </div>
+            <input type="button" value="Encrypt" class="btn btn-primary" id="encryptBtn" onclick="caesarEncrypt()"> <i class="fa fa-arrow-down"></i>
+            <input type="button" value="Decrypt" class="btn btn-primary" id="decryptBtn" onclick="caesarDecrypt()"> <i class="fa fa-arrow-up"></i>
+            <div class="form-group">
+                    <label for="cipherText">Cipher Text</label>
+                    <textarea class="form-control" name="CipherText" id="cipherText" cols="120" rows="8" ></textarea>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <!-- End Main -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="./scripts/caesar2.js"></script>
+    <script></script>
+   </body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Row Transposition</title>
+  </head>
+  <body>
+
+
+    <!-- Start Side Navigation -->
+
+    <div class="sidenav">
+        <div id="logo">
+                <h3 id="logoText" title="CRYPTO"><a href="index.html">CRYPTO</a></h3>
+        </div>
+        <div id="links">
+            <h4 id="parentLink">Substitution</h4>
+            <a href="caesar.html" class="childLink">Caesar</a>
+            <a href="monoalphabetic.html" class="childLink">Monoalphabetic</a>
+            <a href="vigenere.html" class="childLink">Vigenere</a>
+            <a href="playfair.html" class="childLink">Playfair</a>
+            <h4 id="parentLink">Transposition</h4>
+            <a href="rowtransposition.html" class="childLink">Row Transposition</a>
+            <a href="railfence.html" class="childLink">Railfence</a>
+            <h4 id="parentLink">Block Cipher</h4>
+            <a href="rc5.html" class="childLink">RC5</a>
+            <a href="rc5.html" class="childLink">RC6</a>
+            <a href="rc5.html" class="childLink">MRC6</a>
+        </div>
+    </div>
+
+    <!-- End Side Navigation -->
+
+    
+
+    <!-- Start Main -->
+      
+    <div class="container">
+        <div id="rowTrans">
+            <div class="sec">
+                <label for="p">Plaintext</label>
+                <br />
+                <textarea class="form-control" id="p" name="p" rows="4" cols="50">fireonmyorders</textarea>
+            </div>
+            <div class="sec">
+                <label for="key">Keyword : </label> 
+                <input class="form-control" id="key" name="key" size="10" value="vertical" type="text" />
+                <label for="pc">Padding Character : </label> 
+                <input id="pc" class="form-control" name="pc" size="1" value="x" type="text" />
+            </div>
+            <div class="sec">
+                <input class="btn btn-primary" type="button" name="btnEn" value="Encrypt" onclick="handleEncrypt()" /><i class="fa fa-arrow-down"></i>
+                <input class="btn btn-primary" type="button" name="btnDe" value="Decrypt" onclick="handleDecrypt()" /><i class="fa fa-arrow-up"></i>
+            </div>
+            <div class="sec">
+                <label for="c">Ciphertext</label>
+                <br />
+                <textarea class="form-control" id="c" name="c" rows="4" cols="50"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- End Main -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="./scripts/rowtransposition.js"></script>
+   </body>
+</html>

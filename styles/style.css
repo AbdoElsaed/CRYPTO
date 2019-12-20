@@ -1,0 +1,163 @@
+body {
+    font-family: "Lato", sans-serif;
+    padding-left: 300px;
+    background-color: #EEE;
+    color: #333;
+}
+  
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+
+.sidenav #logo #logoText{
+    color: dodgerblue;
+    text-align: center;
+    text-shadow: 4px 4px 5px dodgerblue;
+    cursor: pointer;
+}
+.sidenav #logo a{
+    text-decoration: none;
+    outline: none;
+}
+.sidenav #logo a:hover{
+    color: dodgerblue;
+}
+
+.sidenav #links #parentLink{
+    color: rgb(84, 121, 158);
+    margin-top: 35px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.sidenav #links .childLink{
+    margin-left: 20px;
+    padding-left: 3px;
+    padding-top: 3px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+.sidenav #links .childLink:hover{
+    color: #f1f1f1;
+}
+  
+.main {
+    width: 90%;
+    font-size: 25px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    margin: 100px auto;
+}
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.container form{
+    margin:1px auto;
+}
+.container form button{
+    color: #444;
+    font-weight: 600;
+}
+.container form input[type='text']{
+    width: 400px;
+}
+.container form span{
+    color: #555
+}
+.container form button:hover{
+    color: #444;
+}
+.container form i{
+    color: #444;
+}
+.container form label{
+    margin-top: 15px;
+    font-weight: 600;
+    color: #555;
+}
+.container form textarea{
+    width: 400px;
+}
+
+/****************************** start playfair section *************************************** */
+
+
+#playfairDiv p{
+    width: 1000px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: #DDD;
+    padding: 5px;
+    box-shadow: 3px 3px 10px #CCC;
+    color: #555;
+} 
+#playfairDiv input[type='text']{
+    width: 200px;
+    margin-bottom: 0;
+}
+#playfairDiv button{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+#playfairDiv #AfterGen #keyTable {
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    background-color: #FFF;
+    color: #222;
+    max-width: 100px;
+    padding-left: 10px;
+}
+
+/************************************** start row transposition ******************** */
+
+#rowTrans {
+    padding-top: 10px;
+}
+#rowTrans label {
+    font-size: 18px;
+    color: #666;
+}
+#rowTrans textarea{
+    width: 400px;
+}
+#rowTrans input[type='text']{
+    width: 200px;
+    display: inline-block;
+}
+#rowTrans .sec {
+    margin-top: 40px;
+}
+
+/*************************************** RC5 ***************************************/
+
+#rc5{
+    padding-top: 10px;
+}
+
+#rc5 textarea{
+    width: 400px;
+}
+
+#rc5 input[type='text'], input[type='number']{
+    display: inline-block;
+    width: 200px;
+}
+#rc5 label span{
+    font-size: 14px;
+    opacity: .7;
+}
+#rc5 .sec {
+    margin-top: 40px;
+}
