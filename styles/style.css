@@ -161,3 +161,8 @@ body {
 #rc5 .sec {
     margin-top: 40px;
 }
+#identity{
+    position: absolute;
+    bottom: 20px;
+    left: 550px;    
+}
