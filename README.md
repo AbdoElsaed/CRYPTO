@@ -1,13 +1,13 @@
 # CRYPTO
-I've created this application as a side-project while studying "computer security" subject as a cs student.
+I've created this application as a side-project while studying "Computer Security" subject as a CS student.
 
-the app can be considered as a reference for cryptography algorithms.
+The app can be considered as a reference for cryptography algorithms.
 
-cryptography algorithms are built in javascript.
+Included cryptography algorithms are built in JavaScript.
 
-Available Algorithms so far:
+Available algorithms so far:
 
-* Caesar algorithm
+* Caesar
 
 * Monoalphabetic
 
