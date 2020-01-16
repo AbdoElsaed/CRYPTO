@@ -5,7 +5,7 @@ The app can be considered as a reference for cryptography algorithms.
 
 Included cryptography algorithms are built in JavaScript.
 
-Available algorithms so far:
+### Available algorithms so far:
 
 * Caesar
 
