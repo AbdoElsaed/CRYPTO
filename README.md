@@ -1,5 +1,4 @@
 # CRYPTO
-I've created this application as a side-project while studying "Computer Security" subject as a CS student.
 
 The app can be considered as a reference for cryptography algorithms.
 
